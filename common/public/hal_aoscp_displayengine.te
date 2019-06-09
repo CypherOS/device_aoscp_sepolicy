@@ -1,0 +1,5 @@
+# HwBinder IPC from client to server
+binder_call(hal_aoscp_displayengine_client, hal_aoscp_displayengine_server)
+
+add_hwservice(hal_aoscp_displayengine_server, hal_aoscp_displayengine_hwservice)
+allow hal_aoscp_displayengine_client hal_aoscp_displayengine_hwservice:hwservice_manager find;

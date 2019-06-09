@@ -1,1 +1,2 @@
+vendor.aoscp.displayengine::IDisplayModes                   u:object_r:hal_aoscp_displayengine_hwservice:s0
 vendor.aoscp.touch::IFingerprintNavigation                   u:object_r:hal_aoscp_touch_hwservice:s0
