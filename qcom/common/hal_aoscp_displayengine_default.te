@@ -1,0 +1,14 @@
+# Do not use add_service() as hal_graphics_composer_default may be the provider as well
+allow hal_aoscp_displayengine_default qdisplay_service:service_manager find;
+
+binder_call(hal_aoscp_displayengine_default, hal_graphics_composer_default)
+
+# Allow DisplayEngine to store files under /data/vendor/display and access them
+allow hal_aoscp_displayengine_default display_vendor_data_file:dir rw_dir_perms;
+allow hal_aoscp_displayengine_default display_vendor_data_file:file create_file_perms;
+
+# Allow DisplayEngine to access vendor display property
+get_prop(hal_aoscp_displayengine_default, vendor_display_prop)
+
+# Allow DisplayEngine to access pps socket
+unix_socket_connect(hal_aoscp_displayengine_default, pps, mm-pp-daemon)
