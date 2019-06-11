@@ -1,0 +1,8 @@
+type hal_aoscp_displayengine_sysfs, domain;
+hal_server_domain(hal_aoscp_displayengine_sysfs, hal_aoscp_displayengine)
+
+type hal_aoscp_displayengine_sysfs_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(hal_aoscp_displayengine_sysfs)
+
+# Grant access over DisplayEngine tuneables
+allow hal_aoscp_displayengine_sysfs sysfs_displayengine_tuneable:file rw_file_perms;
