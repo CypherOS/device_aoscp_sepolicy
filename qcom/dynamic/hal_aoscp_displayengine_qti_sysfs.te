@@ -1,0 +1,2 @@
+# Allow DisplayEngine to access vendor display property
+get_prop(hal_aoscp_displayengine_sysfs, vendor_display_prop)
