@@ -1,4 +1,5 @@
 vendor.aoscp.biometrics.fingerprint.inscreen::IFingerprintInscreen    u:object_r:hal_aoscp_inscreen_fingerprint_hwservice:s0
+vendor.aoscp.camera.motor::ICameraMotor            u:object_r:hal_aoscp_camera_motor_hwservice:s0
 vendor.aoscp.displayengine::IDisplayModes                             u:object_r:hal_aoscp_displayengine_hwservice:s0
 vendor.aoscp.touch::IFingerprintNavigation                            u:object_r:hal_aoscp_touch_hwservice:s0
 vendor.aoscp.touch::ITouchscreenGesture                               u:object_r:hal_aoscp_touch_hwservice:s0
